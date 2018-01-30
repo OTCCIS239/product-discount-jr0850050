@@ -9,29 +9,27 @@
     <meta name="author" content="Joshua Ratliff">
 
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles.css">
 
+</head>
+<script>
+  function adjust_textarea(h) {
+      h.style.height = "20px";
+      h.style.height = (h.scrollHeight)+"px";
+  }
+</script>
 <body>
     <!-- form block for grabbing description, list price, and discount -->
-    <div class='container' style="height:100vh;">
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <form>
-                    <div class="form-group">
-                        <label for="formGroupDescription">Description</label>
-                        <input type="text" class="form-control" id="formGroupDescription" placeholder="Your awesome product">
-                    </div>
-                    <div class="form-group">
-                        <label for="formGroupListPrice">List Price</label>
-                        <input type="text" class="form-control" id="formGroupListPrice" placeholder="the dollar amount for your product">
-                    </div>
-                    <div class="form-group">
-                        <label for="formGroupPercentage">Discount Percentage</label>
-                        <input type="text" class="form-control" id="formGroupPercentage" placeholder="percent amount discount">
-                        </div>
-                </form>
-            </div>
-        </div>
-    <div>
+    <div class="form-style-8" id="form">
+      <h2>Please enter your information</h2>
+        <form>
+          <input type="text" name="field1" placeholder="Product Description" />
+          <input type="number" name="field2" placeholder="List Price" />
+          <input type="number" name="field3" placeholder="Discount" />
+          <textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>
+          <input type="button" value="Submit" />
+        </form>
+    </div>
 </body>
+</html>
