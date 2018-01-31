@@ -16,9 +16,9 @@
 
 <body>
     <!-- form block for grabbing description, list price, and discount -->
-    <div class="form-style-8" id="form">
+    <div class="form-style-8">
       <h2>Please enter your information</h2>
-        <form action='product.php'>
+        <form action='product.php' method="get">
           <input type="text" name="field1" placeholder="Product Description" name="description"/>
           <input type="number" name="field2" placeholder="List Price" name="price"/>
           <input type="number" name="field3" placeholder="Discount" name="discount"/>
