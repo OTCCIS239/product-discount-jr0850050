@@ -26,11 +26,11 @@ $total = $price - $discountAmount;
     <div class="form-style-8" id="form">
       <h2>Your discount</h2>
 
-      Your item:  <?php echo $_GET["$description"]; ?><br>
-      The item's price:  <?php echo $_GET["$price"]; ?><br>
-      The item's discount percentage:  <?php echo $_GET["$discount"]; ?><br>
-      The item's discount amount:  <?php echo $_GET["$discountAmount"]; ?><br>
-      The item's new total:  <?php echo $_GET["$total"]; ?><br>
+      Your item:  <?php echo $description; ?><br>
+      The item's price:  <?php echo $price; ?><br>
+      The item's discount percentage:  <?php echo $discount; ?><br>
+      The item's discount amount:  <?php echo $discountAmount; ?><br>
+      The item's new total:  <?php echo $total; ?><br>
 
     </div>
   </body>

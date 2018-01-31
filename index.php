@@ -36,8 +36,8 @@
                     <option value="<?= $product ?>"><?= $product ?></option>
                 <?php endforeach; ?>
             </select>
-          <input type="number" name="field2" placeholder="List Price" name="price"/>
-          <input type="number" name="field3" placeholder="Discount" name="discount"/>
+          <input type="number" placeholder="List Price" name="price"/>
+          <input type="number" placeholder="Discount" name="discount"/>
           <input type="submit" value="Submit" />
         </form>
     </div>
