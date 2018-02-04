@@ -36,6 +36,9 @@
   <div class="form-style-8">
     <h2>Please enter your information</h2>
       <form action='product.php' method="get">
+        <p>
+          Your item
+        </p>
         <select name="description">
           <!-- product foreach block -->
               <?php foreach ($products as $product): ?>
@@ -43,12 +46,17 @@
               <?php endforeach; ?>
           <!-- end of foreach product block -->
           </select>
+          <p>
+            List Price
+          </p>
         <input type="number" placeholder="List Price" name="price"/>
         <!-- discount foreach block -->
+        <p>
+          Discount percentage
+        </p>
         <select name="discount">
           <?php foreach ($discounts as $x => $discount): ?>
-              <!-- <option value="<?= $discount ?>"><?= $discount ?></option> -->
-                <option value=<?= $x . " - " . $discount ?>
+                <option value="<?= $x . " - " . $discount ?>"><?= $discount ?></option>
             <?php endforeach; ?>
         </select>
         <!-- end of discount foreach block -->
