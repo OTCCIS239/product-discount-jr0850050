@@ -4,7 +4,13 @@
         "Screwdriver",
         "Clapton Coil",
         "WD Red 2TB HDD 7200rpm (x4)",
-        "16GB 4x4 DDR4 RAM"
+        "16GB 4x4 DDR4 RAM",
+        "Item 5"
+    ];
+    $discounts = [
+      "QT"=>"3.14159265359",
+      "Customer appeasement"=>"25",
+      "Extreme Couponer"=>"99"
     ];
 
 ?>
@@ -26,20 +32,28 @@
 </head>
 
 <body>
-    <!-- form block for grabbing description, list price, and discount -->
-    <div class="form-style-8">
-      <h2>Please enter your information</h2>
-        <form action='product.php' method="get">
-          <!-- <input type="text" name="field1" placeholder="Product Description" name="description"> -->
-          <select name="description">
-                <?php foreach ($products as $product): ?>
-                    <option value="<?= $product ?>"><?= $product ?></option>
-                <?php endforeach; ?>
-            </select>
-          <input type="number" placeholder="List Price" name="price"/>
-          <input type="number" placeholder="Discount" name="discount"/>
-          <input type="submit" value="Submit" />
-        </form>
-    </div>
+  <!-- form block for grabbing description, list price, and discount -->
+  <div class="form-style-8">
+    <h2>Please enter your information</h2>
+      <form action='product.php' method="get">
+        <select name="description">
+          <!-- product foreach block -->
+              <?php foreach ($products as $product): ?>
+                  <option value="<?= $product ?>"><?= $product ?></option>
+              <?php endforeach; ?>
+          <!-- end of foreach product block -->
+          </select>
+        <input type="number" placeholder="List Price" name="price"/>
+        <!-- discount foreach block -->
+        <select name="discount">
+          <?php foreach ($discounts as $x => $discount): ?>
+              <!-- <option value="<?= $discount ?>"><?= $discount ?></option> -->
+                <option value=<?= $x . " - " . $discount ?>
+            <?php endforeach; ?>
+        </select>
+        <!-- end of discount foreach block -->
+        <input type="submit" value="Submit" />
+      </form>
+  </div>
 </body>
 </html>
