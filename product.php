@@ -28,9 +28,9 @@ $total = $price - $discountAmount;
 
       Your item:  <?php echo $description; ?><br>
       The item's price:  <?php echo $price; ?><br>
-      The item's discount percentage:  <?php echo $discount; ?><br>
-      The item's discount amount:  <?php echo $discountAmount; ?><br>
-      The item's new total:  <?php echo $total; ?><br>
+      The item's discount percentage:  <?php echo $discount ."%"; ?><br>
+      The item's discount amount:  <?php echo "$".number_format($discountAmount, 2); ?><br>
+      The item's new total:  <?php echo "$".number_format($total, 2); ?><br>
 
     </div>
   </body>

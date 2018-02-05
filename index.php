@@ -1,11 +1,11 @@
 <?php
 
     $products = [
-        "Screwdriver",
-        "Clapton Coil",
-        "WD Red 2TB HDD 7200rpm (x4)",
-        "16GB 4x4 DDR4 RAM",
-        "Item 5"
+        "Pizza",
+        "Boneless wings",
+        "Chips and dip",
+        "Brownies",
+        "Gin and Tonic"
     ];
     $discounts = [
       "QT"=>"3.14159265359",
@@ -56,7 +56,7 @@
         </p>
         <select name="discount">
           <?php foreach ($discounts as $x => $xvalue): ?>
-                <option value="<?= $xvalue ?>"><?= $x . " - ". $xvalue ?></option>
+                <option value="<?= $xvalue ?>"><?= $x . " - ". $xvalue ."%" ?></option>
             <?php endforeach; ?>
         </select>
         <!-- end of discount foreach block -->
